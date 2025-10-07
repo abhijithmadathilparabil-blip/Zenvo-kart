@@ -46,6 +46,6 @@
 ## 📬 Contact
 
 Author: Abhijith M
-GitHub: @
+GitHub: @abhijithmadathilparabil-blip
 
-Email: your.email@example.com
+Email: abhijithmadathilparabil@gmail.com
