@@ -9,63 +9,47 @@ import Footer from './Footer';
 
 
 function Payment() {
-    const {  totalPrice ,cart,setCart,count,setCount} = useContext(Mycontext)
+    const { totalPrice, cart, setCart, count, setCount } = useContext(Mycontext)
 
-  const nav=useNavigate()
-  const [cn, setCn] = useState("")
-  const [cno, setCno] = useState("")
-  const [exd, setExd] = useState("")
-  const [cvv, setCvv] = useState("")
-  const [phno,setPhno]=useState("")
-  const [payment, setPayment] = useState("")
-  const [paymentType,setPaymentType]=useState("")
+    const nav = useNavigate()
+    const [cn, setCn] = useState("")
+    const [cno, setCno] = useState("")
+    const [exd, setExd] = useState("")
+    const [cvv, setCvv] = useState("")
+    const [phno, setPhno] = useState("")
+    const [payment, setPayment] = useState("")
+    const [paymentType, setPaymentType] = useState("")
 
-  function Handlepayment(e) {
-    if (cvv.length == 3&& new Date(exd)> new Date()) {
-      const pv = { cn, cno, cvv, exd }
-      setPayment([...payment, pv])
-      alert(`₹${totalPrice+totalPrice*1/10} Payment Successful`)
-      setCn("")
-      setCno("")
-      setCvv("")
-      setExd("")
-      nav('/displaypro')
-      setCart([])
-    
+    function Handlepayment(e) {
+        if (cvv.length == 3 && new Date(exd) > new Date()) {
+            const pv = { cn, cno, cvv, exd }
+            setPayment([...payment, pv])
+            alert(`₹${totalPrice + totalPrice * 1 / 10} Payment Successful`)
+            setCn("")
+            setCno("")
+            setCvv("")
+            setExd("")
+            nav('/displaypro')
+            setCart([])
 
 
+
+        }
+        else {
+            alert("Payment Failed!Enter valid cvv no or Exp")
+        }
     }
-    else {
-      alert("Payment Failed!Enter valid cvv no or Exp")
+    console.log("Total Prie:", totalPrice);
+
+    function upipayment() {
+        const pv = { phno }
+        setPayment([...payment, pv])
+        alert(`${totalPrice + totalPrice * 1 / 10} Payment successfull`)
+        nav('/shop')
+        setCart([])
     }
-  }
-  console.log("Total Prie:",totalPrice);
-  
-  function upipayment(){
-    const pv = { phno}
-    setPayment([...payment, pv])
-    alert(`${totalPrice+totalPrice*1/10} Payment successfull`)
-    nav('/shop')
-    setCart([])
-  }
 
-  console.log("Paymentinfo", payment);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    console.log("Paymentinfo", payment);
 
     return (
         <div>
@@ -139,9 +123,9 @@ function Payment() {
                     )
 
                     }
-                    {(paymentType == 'cod') &&(
+                    {(paymentType == 'cod') && (
                         <div>
-                             <button style={{ justifyItems: "center", marginTop: "2%", padding: "4px 28px", color: "white", backgroundColor: "black" }} onClick={() => alert("Order Confirmed")}>submit</button>
+                            <button style={{ justifyItems: "center", marginTop: "2%", padding: "4px 28px", color: "white", backgroundColor: "black" }} onClick={() => alert("Order Confirmed")}>submit</button>
                         </div>
 
                     )}
@@ -150,9 +134,9 @@ function Payment() {
 
                 </div>
             </Card>
-            <br/>
-      <br/>
-<Footer/>
+            <br />
+            <br />
+            <Footer />
         </div>
     )
 }

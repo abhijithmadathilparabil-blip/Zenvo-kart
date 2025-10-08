@@ -41,7 +41,7 @@ function App() {
       <Mycontext.Provider value={{totalPrice,setPrice,count,setCount,adddetails,setAdddetails,user,setUser,loginuser,setLoginuser, detailss,setDetails,products, setProducts,like,setLike,cart,setCart }}>
         <BrowserRouter>
           <Routes>
-            <Route path='/home' element={<Homepage/>}/>
+            <Route path='/' element={<Homepage/>}/>
             <Route path='/shop' element={<Shopproducts/>}/> 
             <Route path="/footer" element={<Footer/>}/>
             <Route path="/wishlist" element={<Wishlist/>}/>
