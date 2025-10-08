@@ -21,7 +21,7 @@
 
    1) Clone the repository
 
-   git clone https://github.com/yourusername/zenvo-kart.git
+   https://github.com/abhijithmadathilparabil-blip/Zenvo-kart.git
 
    2) Navigate to the project directory
 
