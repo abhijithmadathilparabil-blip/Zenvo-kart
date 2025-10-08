@@ -120,10 +120,10 @@ function Adminhome() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav style={{ marginLeft: 'auto', gap: '20px', marginRight: '20px', fontSize: '22px' }}>
-              <Nav.Link as={Link} to="/home">Home</Nav.Link>
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
               <Nav.Link as={Link} to="/shop">Shop kart</Nav.Link>
               <Nav.Link as={Link} to="/about">About Us</Nav.Link>
-              <Nav.Link as={Link} to="/home">Logout</Nav.Link>
+              <Nav.Link as={Link} to="/">Logout</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

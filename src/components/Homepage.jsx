@@ -36,7 +36,7 @@ function Homepage() {
               
 
              
-              <Nav.Link as={Link} to="/home">Home</Nav.Link>
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
               <Nav.Link as={Link} to="/about">About Us</Nav.Link>
               <Nav.Link as={Link} to="/admin">Admin login</Nav.Link>
               <Nav.Link as={Link} to="/login">Login/Sign Up</Nav.Link>
